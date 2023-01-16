@@ -27,3 +27,6 @@ li{
     font-weight: bold;
     display: inline-block;
 }
+.left{
+	text-align: left;
+}
