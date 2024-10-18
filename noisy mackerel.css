@@ -4,8 +4,7 @@ body {
 <style>
     @font-face {
         font-family: 'Karakaze';
-        src: url('path/to/karakaze-font.woff2') format('woff2'),
-             url('path/to/karakaze-font.woff') format('woff');
+        src: url('https://hallot65.github.io/noisy-mackrel/path/to/karakaze-R.ttf') format('ttf');
     }
 
     .navbar-brand {
