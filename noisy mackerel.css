@@ -1,13 +1,7 @@
 body {
     font-family: "Avenir Next";
   }
-<style>
-    @font-face {
-        font-family: 'Karakaze';
-        src: url('https://github.com/hallot65/noisy-mackrel/raw/refs/heads/main/karakaze-R.ttf') format('ttf');
-    }
+.navbar-brand {
+    font-family: 'Karakaze';
+}
 
-    .navbar-brand {
-        font-family: 'Karakaze', sans-serif;
-    }
-</style>
