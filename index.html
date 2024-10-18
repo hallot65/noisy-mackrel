@@ -10,16 +10,18 @@
         .img-container {
             position: relative;
             overflow: hidden;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 1920px; 
         }
 
         .img-container img {
-            width: 100%;
-            height: auto;
+            max-width: 100%; /* 画像をコンテナにフィットさせる */
+            height: auto; /* 高さは自動で調整 */
+            max-height: 100%; 
         }
 
-        .img-container {
-            height: 1920px;
-        }
     </style>
 </head>
 <body>
@@ -83,7 +85,7 @@
     <div id="member">
         <span>MEMBER</span><br>
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row">
         <div class="col-4 img-container">
           <img src="https://github.com/hallot65/noisy-mackrel/blob/main/marimo_tatie.png?raw=true" >
           <span class="member" style="color:#019946">00.marimo</span>
@@ -95,7 +97,7 @@
           <span class="member" style="color:#029b95">02.みゃ</span>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row">
         <div class="col-4 img-container">
           <span class="member" style="color:#e20181">03.りずる</span>
         </div>
@@ -106,7 +108,7 @@
           <a class="member" href="https://iachara.com/char/view/3570334" style="color:#e90053">05.Hallot</a>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row">
         <div class="col-4 img-container">
           <span class="member" style="color:#8ec220">06.えとわーる</span>
         </div>
@@ -117,7 +119,7 @@
           <span class="member" style="color:#1d2089">08.NEITO</span>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row">
        <div class="col-4 img-container">
           <span class="member" style="color:#019fc2">09.坂本ごましお</span>
         </div>
@@ -135,19 +137,21 @@
         <span class="member" style="color:#019fe8">しずく「ひこまるいるもん…」</span><br>
         <p>【概要】ひまりが「引きずる」の方言「ひこずる」がどれくらい通じるかを聞いたところ、しずくが「“ひこまる”しか知らない」と言ったのが事の発端。<br> 
             しずくは全力で「いる」と説明しているが、その時VCにいた全員、Google先生、さらにはかの有名なmarimo大先生さえも分からず迷宮入りした。</p>
-        <div class="row justify-content-center">
-            <div class="col-md-3">
+      <div class="container">  
+      <div class="row">
+            <div class="col-3 img-container">
                 <img src="https://user-images.githubusercontent.com/118849840/212701798-22831f27-51bc-43fc-8733-0809dae6df13.png" alt="hikomaru" width="200" height="200"> 
             </div>
-            <div class="col-md-3">
+            <div class="col-3 img-container">
                 <img src="https://user-images.githubusercontent.com/118849840/212708604-70378a76-8d3e-4265-a4e4-5f40d3df7a16.png" alt="hikomaru_aluta" width="200" height="200">
             </div>
-            <div class="col-md-3">
+            <div class="col-3 img-container">
                 <a href="https://iachara.com/char/view/5180072"><img src="https://user-images.githubusercontent.com/118849840/212708741-1bd49c3f-346d-4e47-815e-7a536a198cbf.png" alt="hikomaru_ploto" width="200" height="200"></a>
             </div>
-            <div class="col-md-3">
+            <div class="col-3 img-container">
                 <img src="https://user-images.githubusercontent.com/118849840/212708942-cc6696b5-c678-4b7a-8bee-5bf466caaa71.png" alt="shin_hikomaru" width="200" height="200">
             </div>
+        </div>
         </div>
     </div>
 <!-- フッターここから　-->
