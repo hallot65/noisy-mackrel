@@ -1,32 +1,14 @@
 body {
     font-family: "Avenir Next";
   }
+<style>
+    @font-face {
+        font-family: 'Karakaze';
+        src: url('path/to/karakaze-font.woff2') format('woff2'),
+             url('path/to/karakaze-font.woff') format('woff');
+    }
 
-li{
-  list-style: none;
-  float:left;
-  padding: 33px 20px;
-
-}
-.header-logo{
-  font-size: 36px;
-  float: left;
-  padding: 20px 40px;
-}
-
-.header{
-    background-color: #67A7CC;
-    color: #fff;
-    height: 90px;
-}
-.rainbow{
-    background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 300%;
-    font-weight: bold;
-    display: inline-block;
-}
-.left{
-	text-align: left;
-}
+    .navbar-brand {
+        font-family: 'Karakaze', sans-serif;
+    }
+</style>
