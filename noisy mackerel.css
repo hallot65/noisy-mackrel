@@ -4,7 +4,6 @@
   font-style: normal;
 }
 
-body {
-    font-family: "Montserrat Alternates";
-  }
-
+.navbar-brand {
+    font-family: 'Montserrat Alternates', sans-serif; /* タイトルにMontserrat Alternatesフォントを適用 */
+}
