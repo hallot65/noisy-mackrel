@@ -1,72 +1,109 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noisy Mackerel</title>
-    <link rel="stylesheet" href="noisy mackerel.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noisy Mackerel</title>
+  <!-- Bootstrap CSSを追加 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <body background="https://github.com/hallot65/noisy-mackrel/assets/118849840/dc6f999b-393a-458e-900f-563aae4b908b">
-
-    <div class="header">
-        <div class="header-logo">Noisy Mackerel</div>
-      <div class="header-list">
-        <ul>
-          <li><a href="#summary" style="color:#ffffff">summary</a></li>
-          <li><a href="#member" style="color:#ffffff">member</a></li>
-          <li><a href="#correlation" style="color:#ffffff">correlation</a></li>
-          <li><a href="#vocabulary" style="color:#b4e8ff">vocabulary</a></li>
-          <li><a href="#affair" style="color:#ffffff">affair</a> </li>
-         
-        </ul>
+  <!-- ここにBootstrapのコードを追加していきます -->
+  <!-- ナビゲーションバーここから　-->
+<nav class="navbar navbar-expand-lg" style="background-color: #67A7CC;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#Noisy Mackerel" style="color:#ffffff">Noisy Mackerel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#summary" id="summary" style="color:#ffffff">summary</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#member" id="member" style="color:#ffffff">member</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#correlation" id="correlation" style="color:#ffffff">correlation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#vocabulary" id="vocabulary" style="color:#ffffff">vocabulary</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#affair" id="affair" style="color:#ffffff">affair</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ナビゲーションバーここまで　-->
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/images/urusaba_syuugou.png" alt="First slide">
       </div>
+      <!--<div class="carousel-item">
+        <img src="" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img src="" alt="Third slide">
+      </div>-->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
     </div>
-
-    
-    <div class="main">
-        <div id="summary">
-            <h2>発足理由：うるさい<h2>
-            <p>うるさすぎて隔離された鯖達。植物性プランクトンの大繁殖！！</p>
-        </div>
-        
-        <div id="member">
-            <h3><font color="878787">MEMBER</font></h3>
-            <h4><font color="#019946">00.marimo</font></h4>
-            <p>丸くて子どもに人気のある人物。または、3文字で緑の食べ物。</p>
-            <h4><font color="#019fe8">01.しずく/青汁</font></h4>
-            <h4><font color="029b95">02.みゃ</font></h4>
-            <p>青碧色のアメーバでできた夜行性のあざらしおじい。【芸術(うる鯖スタンプ)】技能を持っている。</p>
-            <h4><font color="e20181">03.りずる</font></h4>
-            <h4><font color="f59701">04.陽碧</font></h4>
-            <h4><font color="e90053"><a href="https://iachara.com/char/view/3570334" style="color:#e90053">05.Hallot</a></font></h4>
-            <p><b>性癖</b>色のオーラを纏うアルパカ。性癖は世界を救う。</p>
-            <h4><font color="8ec220">06.えとわーる</font></h4>
-            <p>笑い声がミュートを突き抜ける凱旋門。緑を愛し緑に愛された女(性別不詳)。</p>
-            <h4><font color="0368b6">07.紘。</font></h4>
-            <h4><font color="1d2089">08.NEITO</font></h4>
-            <h4><font color="019fc2">09.坂本ごましお</font></h4>
-            <h4><font color="5f1989">10.うぃるだー</font></h4>
-            <h4><font color="e80113">11.宇田川たこ</font></h4>
-            <p>口が悪い修羅ディンガーのたこ。地雷が多すぎて逆に地雷源。</p>
-        </div>
-        
-        <div id="affair">
-            <h3>1.16事件</h3>
-            <p>しずく「ひこまるいるもん…」</p>
-            <p>【概要】ひまりが「引きずる」の方言「ひこずる」がどれくらい通じるかを聞いたところしずくが「“ひこまる”しか知らない」と言ったところから端を発する。<br> 
-                しずくは全力で「いる」と説明しているが、その時vcにいた全員、Google先生、さらにはかのmarimo大先生さえも分からず迷宮入りした。</p>
-            <li><img src="https://user-images.githubusercontent.com/118849840/212701798-22831f27-51bc-43fc-8733-0809dae6df13.png" alt="hikomaru" width="200" height="200"> </li>
-            <li><img src="https://user-images.githubusercontent.com/118849840/212708604-70378a76-8d3e-4265-a4e4-5f40d3df7a16.png" alt="hikomaru_aluta" width="200" height="200"></li>
-            <li><a href="https://iachara.com/char/view/5180072"><img src="https://user-images.githubusercontent.com/118849840/212708741-1bd49c3f-346d-4e47-815e-7a536a198cbf.png" alt="hikomaru_ploto" width="200" height="200"></a></li>
-            <li><img src="https://user-images.githubusercontent.com/118849840/212708942-cc6696b5-c678-4b7a-8bee-5bf466caaa71.png" alt="shin_hikomaru" width="200" height="200"></li>
-            
-        </div>
+  </div>
+  <div class="main">
+    <div id="summary">
+        <!--考えてない-->
     </div>
     
-    <div class='footer'>
+    <div id="member">
+        <span>MEMBER</span><br>
+        <span class="member" style="color:#019946">00.marimo</span><br>
+        <span class="member" style="color:#019fe8">01.しずく/青汁</span><br>
+        <span class="member" style="color:#029b95">02.みゃ</span><br>
+        <span class="member" style="color:#e20181">03.りずる</span><br>
+        <span class="member" style="color:#f59701">04.陽碧</span><br>
+        <a class="member" href="https://iachara.com/char/view/3570334" style="color:#e90053">05.Hallot</a><br>
+        <span class="member" style="color:#8ec220">06.えとわーる</span><br>
+        <span class="member" style="color:#0368b6">07.紘。</span><br>
+        <span class="member" style="color:#1d2089">08.NEITO</span><br>
+        <span class="member" style="color:#019fc2">09.坂本ごましお</span><br>
+        <span class="member" style="color:#5f1989">10.うぃるだー</span><br>
+        <span class="member" style="color:#e80113">11.宇田川たこ</span><br>
     </div>
-
+    <div id="affair">
+        <h3>1.16事件</h3>
+        <span class="member" style="color:#019fe8">しずく「ひこまるいるもん…」</span><br>
+        <p>【概要】ひまりが「引きずる」の方言「ひこずる」がどれくらい通じるかを聞いたところ、しずくが「“ひこまる”しか知らない」と言ったのが事の発端。<br> 
+            しずくは全力で「いる」と説明しているが、その時VCにいた全員、Google先生、さらにはかの有名なmarimo大先生さえも分からず迷宮入りした。</p>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://user-images.githubusercontent.com/118849840/212701798-22831f27-51bc-43fc-8733-0809dae6df13.png" alt="hikomaru" width="200" height="200"> 
+            </div>
+            <div class="col-md-3">
+                <img src="https://user-images.githubusercontent.com/118849840/212708604-70378a76-8d3e-4265-a4e4-5f40d3df7a16.png" alt="hikomaru_aluta" width="200" height="200">
+            </div>
+            <div class="col-md-3">
+                <a href="https://iachara.com/char/view/5180072"><img src="https://user-images.githubusercontent.com/118849840/212708741-1bd49c3f-346d-4e47-815e-7a536a198cbf.png" alt="hikomaru_ploto" width="200" height="200"></a>
+            </div>
+            <div class="col-md-3">
+                <img src="https://user-images.githubusercontent.com/118849840/212708942-cc6696b5-c678-4b7a-8bee-5bf466caaa71.png" alt="shin_hikomaru" width="200" height="200">
+            </div>
+        </div>
+    </div>
+<!-- フッターここから　-->
+<footer class="bg-dark text-white text-center py-3">
+  <p>© 2024 Noisy Mackerel.</p>
+</footer>
+<!-- フッターここまで　-->
+  <!-- Bootstrap JSを追加（もしJSを使う場合） -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
