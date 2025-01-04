@@ -12,11 +12,17 @@
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 16px;
     }
-    .carousel-inner img {
-    max-width: 100%; /* 横幅をコンテナに合わせる */
-    height: auto;    /* アスペクト比を保つ */
-    max-height: 500px; /* 高さを最大500pxに制限 */
-    object-fit: contain; /* 画像を全体に合わせる */
+   .carousel-inner {
+    display: flex;
+    justify-content: center; /* 水平方向の中央寄せ */
+    align-items: center;     /* 垂直方向の中央寄せ */
+    height: 100vh;           /* スライド全体の高さを画面いっぱいにする */
+  }
+
+  .carousel-inner img {
+    max-width: 90%; /* 横幅を画面の90%に設定 */
+    max-height: 90%; /* 高さを画面の90%に設定 */
+    object-fit: contain; /* 元の比率を保ったまま画像を調整 */
   }
         .img-container {
         position: relative;
