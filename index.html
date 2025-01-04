@@ -256,8 +256,9 @@
 
       // OKボタンでURLに移動
       confirmButton.addEventListener("click", () => {
-        window.location.href = targetURL; // 指定のURLに移動
-      });
+            window.open(targetURL, "_blank"); // 新しいタブで開く
+            popup.classList.remove("active"); // ポップアップを閉じる
+        });
 
       // キャンセルボタンでポップアップを閉じる
       cancelButton.addEventListener("click", () => {
