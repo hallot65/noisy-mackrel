@@ -8,24 +8,28 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
         .img-container {
-            position: relative;
-            overflow: hidden;
-            display: flex; 
-            justify-content: center; 
-            align-items: flex-start; 
-            flex-direction: column;
-        }
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 中央揃え */
+        justify-content: flex-end; /* 下部揃え */
+        width: 150px; /* カラム幅に合わせて調整 */
+        height: 200px; /* 高さを統一 */
+        margin: 10px auto; /* 中央に配置 */
+    }
 
-        .img-container img {
-            max-width: 100%; /* 画像をコンテナにフィットさせる */
-            height: auto; /* 高さは自動で調整 */
-            max-height: 100%; 
-        }
+    .img-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* 画像を中央でトリミング */
+    }
 
-      .caption {
-            text-align: center; /* テキストを中央寄せ */
-            margin-top: 10px; /* 上部にスペースを追加 */
-        }
+    .caption {
+        text-align: center; /* テキストを中央寄せ */
+        margin-top: 10px; /* 上部にスペースを追加 */
+        color: inherit; /* テーマに応じて色変更 */
+    }
 
     </style>
 </head>
