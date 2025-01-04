@@ -14,26 +14,27 @@
         flex-direction: column;
         align-items: center; /* 中央揃え */
         justify-content: flex-start; /* 上部揃え */
-        width: 200px; /* 画像とテキストのボックス幅 */
-        height: 300px; /* ボックス高さ */
-        margin: 10px; /* マージンを調整 */
+        width: 300px; /* ボックス幅を拡大 */
+        height: 400px; /* ボックス高さを拡大 */
+        margin: 20px; /* 各要素間のスペース */
         text-align: center; /* テキストを中央揃え */
     }
 
     .img-container img {
-        max-width: 100%;
-        max-height: 70%; /* ボックスの70%に画像を収める */
+        max-width: 100%; /* ボックス幅いっぱい */
+        max-height: 85%; /* 高さの85%を画像に使用 */
         object-fit: contain; /* 画像全体が収まる */
     }
 
     .caption {
-        margin-top: 5px; /* 名前のスペース */
+        margin-top: 10px; /* 名前のスペース */
         color: inherit;
         font-weight: bold; /* 名前を目立たせる */
+        font-size: 1.2rem; /* 名前のフォントを大きく */
     }
 
     .description {
-        font-size: 0.9rem; /* 紹介文を少し小さめに */
+        font-size: 1rem; /* 紹介文のフォントも拡大 */
         margin-top: 5px; /* 名前との間に余白 */
         color: #555; /* 少し薄い色 */
     }
