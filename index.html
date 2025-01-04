@@ -44,6 +44,56 @@
         word-wrap: break-word; /* 長い文章を折り返す */
         line-height: 1.5; /* 行間を広げる */
     }
+    /* 背景のオーバーレイ */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s;
+        z-index: 1000;
+    }
+
+    /* ポップアップ表示時のスタイル */
+    .popup-overlay.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* ポップアップの内容 */
+    .popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ボタンスタイル */
+    .popup-content button {
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .popup-content .confirm {
+        background: #007BFF;
+        color: white;
+    }
+
+    .popup-content .cancel {
+        background: #ccc;
+        color: black;
+    }
 
     </style>
 </head>
@@ -179,14 +229,15 @@
             <div class="col-3">
                 <a href="https://iachara.com/char/view/5180072"><img src="https://user-images.githubusercontent.com/118849840/212708741-1bd49c3f-346d-4e47-815e-7a536a198cbf.png" alt="hikomaru_ploto" width="200" height="200">
                 </a>
+              </div>
               <div class="popup-overlay" id="popup">
-                  <div class="popup-content">
-                      <p>このページに移動しますか？</p>
-                      <button class="confirm">OK</button>
-                      <button class="cancel">キャンセル</button>
-                  </div>
+                <div class="popup-content">
+                    <p>このページに移動しますか？</p>
+                    <button class="confirm">OK</button>
+                    <button class="cancel">キャンセル</button>
                 </div>
-            </div>
+              </div>
+            
             <div class="col-3">
                 <img src="https://user-images.githubusercontent.com/118849840/212708942-cc6696b5-c678-4b7a-8bee-5bf466caaa71.png" alt="shin_hikomaru" width="200" height="200">
             </div>
@@ -199,22 +250,22 @@
 </footer>
 <!-- フッターここまで　-->
   <!-- Bootstrap JSを追加（もしJSを使う場合） -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const image3 = document.getElementById("image3");
-        const popup = document.getElementById("popup");
+        const image3 = document.getElementById("image3"); // 画像要素
+        const popup = document.getElementById("popup"); // ポップアップ要素
         const confirmButton = document.querySelector(".popup-content .confirm");
         const cancelButton = document.querySelector(".popup-content .cancel");
-        const targetURL = "https://example.com";
+        const targetURL = "https://example.com"; // 飛ばしたいURL
 
         // 画像クリックでポップアップを表示
         image3.addEventListener("click", () => {
             popup.classList.add("active");
         });
 
-        // OKボタンでURLに飛ぶ
+        // OKボタンでURLに移動
         confirmButton.addEventListener("click", () => {
-            window.location.href = targetURL;
+            window.location.href = targetURL; // 指定のURLに飛ぶ
         });
 
         // キャンセルボタンでポップアップを閉じる
@@ -222,6 +273,6 @@
             popup.classList.remove("active");
         });
     });
-  </script>
+</script>
 </body>
 </html>
