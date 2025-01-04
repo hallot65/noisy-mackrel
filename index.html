@@ -13,22 +13,29 @@
         display: flex;
         flex-direction: column;
         align-items: center; /* 中央揃え */
-        justify-content: flex-end; /* 下部揃え */
-        width: 150px; /* カラム幅に合わせて調整 */
-        height: 200px; /* 高さを統一 */
-        margin: 10px auto; /* 中央に配置 */
+        justify-content: flex-start; /* 上部揃え */
+        width: 200px; /* 画像とテキストのボックス幅 */
+        height: 300px; /* ボックス高さ */
+        margin: 10px; /* マージンを調整 */
+        text-align: center; /* テキストを中央揃え */
     }
 
     .img-container img {
         max-width: 100%;
-        max-height: 100%;
-        object-fit: cover; /* 画像を中央でトリミング */
+        max-height: 70%; /* ボックスの70%に画像を収める */
+        object-fit: contain; /* 画像全体が収まる */
     }
 
     .caption {
-        text-align: center; /* テキストを中央寄せ */
-        margin-top: 10px; /* 上部にスペースを追加 */
-        color: inherit; /* テーマに応じて色変更 */
+        margin-top: 5px; /* 名前のスペース */
+        color: inherit;
+        font-weight: bold; /* 名前を目立たせる */
+    }
+
+    .description {
+        font-size: 0.9rem; /* 紹介文を少し小さめに */
+        margin-top: 5px; /* 名前との間に余白 */
+        color: #555; /* 少し薄い色 */
     }
 
     </style>
@@ -98,6 +105,7 @@
         <div class="col-4 img-container">
           <img src="https://github.com/hallot65/noisy-mackrel/blob/main/marimo_tatie.png?raw=true" >
           <span class="caption" style="color:#019946">00.marimo</span>
+          <span class="description">みんなの大先生</span>
         </div>
         <div class="col-4 img-container">
           <img src="https://github.com/hallot65/noisy-mackrel/blob/main/sizuku_tatie.png?raw=true">
