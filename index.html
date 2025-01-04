@@ -177,7 +177,14 @@
                 <img src="https://user-images.githubusercontent.com/118849840/212708604-70378a76-8d3e-4265-a4e4-5f40d3df7a16.png" alt="hikomaru_aluta" width="200" height="200">
             </div>
             <div class="col-3">
-                <a href="https://iachara.com/char/view/5180072"><img src="https://user-images.githubusercontent.com/118849840/212708741-1bd49c3f-346d-4e47-815e-7a536a198cbf.png" alt="hikomaru_ploto" width="200" height="200"></a>
+                <a href="https://iachara.com/char/view/5180072"><img src="https://user-images.githubusercontent.com/118849840/212708741-1bd49c3f-346d-4e47-815e-7a536a198cbf.png" alt="hikomaru_ploto" width="200" height="200">
+                <div class="popup-overlay" id="popup">
+                  <div class="popup-content">
+                      <p>このページに移動しますか？</p>
+                      <button class="confirm">OK</button>
+                      <button class="cancel">キャンセル</button>
+                  </div>
+                </div></a>
             </div>
             <div class="col-3">
                 <img src="https://user-images.githubusercontent.com/118849840/212708942-cc6696b5-c678-4b7a-8bee-5bf466caaa71.png" alt="shin_hikomaru" width="200" height="200">
@@ -191,6 +198,29 @@
 </footer>
 <!-- フッターここまで　-->
   <!-- Bootstrap JSを追加（もしJSを使う場合） -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    document.addEventListener("DOMContentLoaded", () => {
+        const image3 = document.getElementById("image3");
+        const popup = document.getElementById("popup");
+        const confirmButton = document.querySelector(".popup-content .confirm");
+        const cancelButton = document.querySelector(".popup-content .cancel");
+        const targetURL = "https://example.com";
+
+        // 画像クリックでポップアップを表示
+        image3.addEventListener("click", () => {
+            popup.classList.add("active");
+        });
+
+        // OKボタンでURLに飛ぶ
+        confirmButton.addEventListener("click", () => {
+            window.location.href = targetURL;
+        });
+
+        // キャンセルボタンでポップアップを閉じる
+        cancelButton.addEventListener("click", () => {
+            popup.classList.remove("active");
+        });
+    });
+  </script>
 </body>
 </html>
