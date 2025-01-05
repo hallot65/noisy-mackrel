@@ -223,8 +223,8 @@
         <div class="col-4 img-container">
           <img id="hapikuo1" src="https://github.com/hallot65/noisy-mackrel/blob/main/rizuru_tatie.png?raw=true">
           <span class="caption" style="color:#e20181">03.りずる</span>
-          <a id="floatPopup" class="float-popup">
-              <img id="popupImage" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
+          <a id="floatPopup1" class="float-popup">
+              <img id="popupImage1" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
             </a>
         </div>
         <div class="col-4 img-container">
@@ -258,15 +258,15 @@
         <div class="col-4 img-container">
             <img id="hapikuo2" src="https://github.com/hallot65/noisy-mackrel/blob/main/wiruda_tatie.png?raw=true">
             <span class="caption" style="color:#5f1989">10.うぃるだー</span>
-            <a id="floatPopup" class="float-popup">
-              <img id="popupImage" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
+            <a id="floatPopup2" class="float-popup">
+              <img id="popupImage2" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
             </a>
         </div>
         <div class="col-4 img-container">
           <img id="hapikuo3" src="https://github.com/hallot65/noisy-mackrel/blob/main/tako_tatie.png?raw=true">
           <span class="caption" style="color:#e80113">11.宇田川たこ</span>
-          <a id="floatPopup" class="float-popup">
-              <img id="popupImage" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
+          <a id="floatPopup3" class="float-popup">
+              <img id="popupImage3" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
             </a>
         </div>
       </div>
@@ -311,31 +311,31 @@
 <!-- フッターここまで　-->
   <!-- Bootstrap JSを追加（もしJSを使う場合） -->
   <script>
+
     document.addEventListener("DOMContentLoaded", () => {
-    const hapikuoImage = document.getElementById("hapikuo"); // クリック対象画像
-    const hapikuo1Image = document.getElementById("hapikuo1");
-    const floatPopup = document.getElementById("floatPopup"); // ポップアップ要素
+  const popups = [
+    { image: "hapikuo", popup: "floatPopup" },
+    { image: "hapikuo1", popup: "floatPopup" },
+    { image: "hapikuo2", popup: "floatPopup2" },
+    { image: "hapikuo3", popup: "floatPopup3" },
+  ];
 
-    hapikuo1Image.addEventListener("click", () => {
-      // ポップアップを表示
-      floatPopup.classList.add("active");
+  popups.forEach(({ image, popup }) => {
+    const imageElement = document.getElementById(image);
+    const popupElement = document.getElementById(popup);
 
-      // 一定時間後に非表示にする
-      setTimeout(() => {
-        floatPopup.classList.remove("active");
-      }, 3000); // 表示時間 (3000ms = 3秒)
-    });
-    // クリック時の動作
-    hapikuoImage.addEventListener("click", () => {
-      // ポップアップを表示
-      floatPopup.classList.add("active");
+    imageElement.addEventListener("click", () => {
+      // ポップアップを画像の上に表示
+      popupElement.classList.add("active");
 
       // 一定時間後に非表示にする
       setTimeout(() => {
-        floatPopup.classList.remove("active");
+        popupElement.classList.remove("active");
       }, 3000); // 表示時間 (3000ms = 3秒)
     });
   });
+});
+    
     document.addEventListener("DOMContentLoaded", () => {
       const image3 = document.getElementById("image3"); // 画像要素
       const popup = document.getElementById("popup"); // ポップアップ要素
