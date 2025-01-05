@@ -221,7 +221,7 @@
       </div>
       <div class="row">
         <div class="col-4 img-container">
-          <img id="hapikuo" src="https://github.com/hallot65/noisy-mackrel/blob/main/rizuru_tatie.png?raw=true">
+          <img id="hapikuo1" src="https://github.com/hallot65/noisy-mackrel/blob/main/rizuru_tatie.png?raw=true">
           <span class="caption" style="color:#e20181">03.りずる</span>
           <a id="floatPopup" class="float-popup">
               <img id="popupImage" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
@@ -256,14 +256,14 @@
           <span class="caption" style="color:#019fc2">09.坂本ごましお</span>
         </div>
         <div class="col-4 img-container">
-            <img id="hapikuo" src="https://github.com/hallot65/noisy-mackrel/blob/main/wiruda_tatie.png?raw=true">
+            <img id="hapikuo2" src="https://github.com/hallot65/noisy-mackrel/blob/main/wiruda_tatie.png?raw=true">
             <span class="caption" style="color:#5f1989">10.うぃるだー</span>
             <a id="floatPopup" class="float-popup">
               <img id="popupImage" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
             </a>
         </div>
         <div class="col-4 img-container">
-          <img id="hapikuo" src="https://github.com/hallot65/noisy-mackrel/blob/main/tako_tatie.png?raw=true">
+          <img id="hapikuo3" src="https://github.com/hallot65/noisy-mackrel/blob/main/tako_tatie.png?raw=true">
           <span class="caption" style="color:#e80113">11.宇田川たこ</span>
           <a id="floatPopup" class="float-popup">
               <img id="popupImage" src="https://github.com/hallot65/noisy-mackrel/blob/main/hapikuo.png?raw=true" alt="floating image">
@@ -313,8 +313,18 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
     const hapikuoImage = document.getElementById("hapikuo"); // クリック対象画像
+    const hapikuo1Image = document.getElementById("hapikuo1");
     const floatPopup = document.getElementById("floatPopup"); // ポップアップ要素
 
+    hapikuo1Image.addEventListener("click", () => {
+      // ポップアップを表示
+      floatPopup.classList.add("active");
+
+      // 一定時間後に非表示にする
+      setTimeout(() => {
+        floatPopup.classList.remove("active");
+      }, 3000); // 表示時間 (3000ms = 3秒)
+    });
     // クリック時の動作
     hapikuoImage.addEventListener("click", () => {
       // ポップアップを表示
