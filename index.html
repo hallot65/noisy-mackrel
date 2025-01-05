@@ -313,25 +313,31 @@
   <script>
 
     document.addEventListener("DOMContentLoaded", () => {
-  const popups = [
-    { image: "hapikuo", popup: "floatPopup" },
-    { image: "hapikuo1", popup: "floatPopup" },
-    { image: "hapikuo2", popup: "floatPopup2" },
-    { image: "hapikuo3", popup: "floatPopup3" },
-  ];
+    // 対象画像とポップアップ要素を取得
+    const imageElements = document.querySelectorAll("#hapikuo, #hapikuo1, #hapikuo2, #hapikuo3"); 
+    const floatPopup = document.getElementById("floatPopup"); 
+    const popupImage = document.getElementById("popupImage");
 
-  popups.forEach(({ image, popup }) => {
-    const imageElement = document.getElementById(image);
-    const popupElement = document.getElementById(popup);
+    // 画像クリック時の動作
+    imageElements.forEach((image) => {
+      image.addEventListener("click", (event) => {
+        // 画像の位置を取得
+        const rect = event.target.getBoundingClientRect();
+        const popupX = rect.left + rect.width / 2; // 画像の中央
+        const popupY = rect.top + rect.height / 2; // 画像の中央
 
-    imageElement.addEventListener("click", () => {
-      // ポップアップを画像の上に表示
-      popupElement.classList.add("active");
+        // ポップアップを画像の上に配置
+        floatPopup.style.left = `${popupX}px`;
+        floatPopup.style.top = `${popupY}px`;
 
-      // 一定時間後に非表示にする
-      setTimeout(() => {
-        popupElement.classList.remove("active");
-      }, 3000); // 表示時間 (3000ms = 3秒)
+        // ポップアップを表示
+        floatPopup.classList.add("active");
+
+        // 一定時間後に非表示
+        setTimeout(() => {
+          floatPopup.classList.remove("active");
+        }, 3000);
+      });
     });
   });
 });
