@@ -112,14 +112,14 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -100%) scale(0);
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
     z-index: 1100;
   }
   .float-popup img {
-    width: 100px;
+    width: 200px;
     height: auto;
     animation: float 2s ease-in-out infinite;
   }
@@ -313,34 +313,53 @@
   <script>
 
     document.addEventListener("DOMContentLoaded", () => {
-    // 対象画像とポップアップ要素を取得
-    const imageElements = document.querySelectorAll("#hapikuo, #hapikuo1, #hapikuo2, #hapikuo3"); 
-    const floatPopup = document.getElementById("floatPopup"); 
-    const popupImage = document.getElementById("popupImage");
+    const hapikuoImage = document.getElementById("hapikuo"); // クリック対象画像
+    const hapikuo1Image = document.getElementById("hapikuo1");
+    const hapikuo2Image = document.getElementById("hapikuo2");
+    const hapikuo3Image = document.getElementById("hapikuo3");
+    const floatPopup = document.getElementById("floatPopup"); // ポップアップ要素
+    const floatPopup1 = document.getElementById("floatPopup1");
+    const floatPopup2 = document.getElementById("floatPopup2");
+    const floatPopup3 = document.getElementById("floatPopup3");
 
-    // 画像クリック時の動作
-    imageElements.forEach((image) => {
-      image.addEventListener("click", (event) => {
-        // 画像の位置を取得
-        const rect = event.target.getBoundingClientRect();
-        const popupX = rect.left + rect.width / 2; // 画像の中央
-        const popupY = rect.top + rect.height / 2; // 画像の中央
+    hapikuo1Image.addEventListener("click", () => {
+      // ポップアップを表示
+      floatPopup1.classList.add("active");
 
-        // ポップアップを画像の上に配置
-        floatPopup.style.left = `${popupX}px`;
-        floatPopup.style.top = `${popupY}px`;
+      // 一定時間後に非表示にする
+      setTimeout(() => {
+        floatPopup1.classList.remove("active");
+      }, 3000); // 表示時間 (3000ms = 3秒)
+    });
+    hapikuo2Image.addEventListener("click", () => {
+      // ポップアップを表示
+      floatPopup2.classList.add("active");
 
-        // ポップアップを表示
-        floatPopup.classList.add("active");
+      // 一定時間後に非表示にする
+      setTimeout(() => {
+        floatPopup2.classList.remove("active");
+      }, 3000); // 表示時間 (3000ms = 3秒)
+    });
+    hapikuo3Image.addEventListener("click", () => {
+      // ポップアップを表示
+      floatPopup3.classList.add("active");
 
-        // 一定時間後に非表示
-        setTimeout(() => {
-          floatPopup.classList.remove("active");
-        }, 3000);
-      });
+      // 一定時間後に非表示にする
+      setTimeout(() => {
+        floatPopup3.classList.remove("active");
+      }, 3000); // 表示時間 (3000ms = 3秒)
+    });
+    // クリック時の動作
+    hapikuoImage.addEventListener("click", () => {
+      // ポップアップを表示
+      floatPopup.classList.add("active");
+
+      // 一定時間後に非表示にする
+      setTimeout(() => {
+        floatPopup.classList.remove("active");
+      }, 3000); // 表示時間 (3000ms = 3秒)
     });
   });
-});
     
     document.addEventListener("DOMContentLoaded", () => {
       const image3 = document.getElementById("image3"); // 画像要素
