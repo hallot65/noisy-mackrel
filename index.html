@@ -54,6 +54,29 @@
         object-fit: contain;
     }
 
+    .img-container:hover {
+      transform: scale(1.05);
+    }
+
+    .img-container .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .img-container:hover .overlay {
+      opacity: 1;
+    }
+
     .caption {
         margin-top: 10px;
         color: inherit;
@@ -204,6 +227,9 @@
       <div class="row">
         <div class="col-4 img-container">
           <img src="https://github.com/hallot65/noisy-mackrel/blob/main/marimo_tatie.png?raw=true" >
+	  <div class="overlay">
+            <p>ようこそ</p>
+          </div>
           <span class="caption" style="color:#019946">00.marimo</span>
           <span class="description">みんなの大先生</span>
         </div>
